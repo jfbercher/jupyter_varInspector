@@ -1,5 +1,8 @@
 # Variable Inspector
 
+<p style="color:red;"> This is the original repo for this extension, and kept for an historical perpective. However, th emost recent developments have been done in [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/). Please add new contributions/commits there. Thanks</p>
+
+
 ## Description and main features
 
 The Variable Inspector extension, which currently supports python and R kernels,  enables to collect all defined variables and display them in a floating window. The window not only display the name of variables but also  their type, size in memory and content. The columns are sortable. The window is draggable, resizable, collapsable. The list of displayed variables is automatically updated at each cell execution. Variables can be deleted from workspace by clicking a link. Position and state (displayed/collapsed) are stored in the notebook's metadata and restored at startup. 
