@@ -1,10 +1,8 @@
 from sys import getsizeof
-from IPython.core.magics.namespace import NamespaceMagics
 from IPython import get_ipython
 import json
-_nms = NamespaceMagics()
 _Jupyter = get_ipython()
-_nms.shell = _Jupyter.kernel.shell
+_hidden = _Jupyter.user_ns_hidden.keys()
 
 
 def _getsizeof(x):
@@ -21,9 +19,9 @@ def _getsizeof(x):
 def var_dic_list():
     types_to_exclude = ['module', 'function', 'builtin_function_or_method',
                         'instance', '_Feature', 'type', 'ufunc']
-    values = _nms.who_ls()
+    values = [k for k in _Jupyter.ns_table['user_local'] if k not in _hidden]
     vardic = [{'varName': v, 'varType': type(eval(v)).__name__, 'varSize': _getsizeof(eval(v)), 'varContent': str(eval(v))[:200]} # noqa
-    for v in values if (v not in ['_html', '_nms', 'NamespaceMagics', '_Jupyter']) & (type(eval(v)).__name__ not in types_to_exclude)] # noqa 
+    for v in values if (v not in ['_html', '_Jupyter', '_hidden']) & (type(eval(v)).__name__ not in types_to_exclude)] # noqa 
     return json.dumps(vardic)
 
 
