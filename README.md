@@ -1,6 +1,8 @@
 # Variable Inspector
 
-<p style="color:red;"> This is the original repo for this extension, and kept for an historical perpective. However, th emost recent developments have been done in [jupyter_contrib_nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/). Please add new contributions/commits there. Thanks</p>
+---
+<strong style="color:red"> This is the original repo for this extension, and kept for an historical perpective. However, the most recent developments have been done in <a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions/"> jupyter_contrib_nbextensions</a>. Please add new contributions/commits there. Thanks</strong>
+---
 
 
 ## Description and main features
